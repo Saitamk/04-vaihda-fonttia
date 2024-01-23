@@ -1,0 +1,26 @@
+html {
+  font-size: 62.5%;
+  padding: 2rem;
+}
+
+body {
+  display: block;
+  float: inline-start;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3rem;
+}
+#nappi {
+  float: inline-start;
+  color: white;
+  background-color: blue;
+  border-radius: 3px 3px 3px 3px;
+  border: solid 1px white;
+}
+
+.infobox {
+  float: inline-end;
+}

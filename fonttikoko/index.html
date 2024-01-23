@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vaihda fonttikokoa Javascriptin avulla</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+  </head>
+  <body>
+    <h1>Muuta fonttikokoa Javascriptillä</h1>
+    <p>Huom! Kaikki muutokset tapahtuvat Javascriptin avulla</p>
+    <p>
+      Listan fonttikokoa muutetaan alla olevaa painonappia painamalla. Listan
+      oletusfonttikoko on 16px.
+    </p>
+    <h2>Tämän listan fonttikoko muuttuu napista painamalla</h2>
+    <ol id="lista">
+      <li>1. Ensimmäinen napin painallus muuttaa fonttikooksi 20px</li>
+      <li>2. Toinen napin painallus muuttaa fonttikooksi 24px</li>
+      <li>3. Kolmas napin painallus muuttaa fonttikooksi 28px</li>
+      <li>4. Neljäs napin painallus muuuttaa fonttikooksi 32px</li>
+      <li>5. Viides napin painallus muuuttaa fonttikooksi 16px</li>
+    </ol>
+    <p class="infoboxi">Fonttikoko nyt:<span id="fonttikoko">16</span></p>
+
+    <button id="nappi" type="button" onclick="kasvataFonttikokoa()">
+      Kasvata fonttikokoa
+    </button>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
