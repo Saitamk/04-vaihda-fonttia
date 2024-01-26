@@ -1,18 +1,13 @@
-// Määritellään muuttuja nykyiselle fontille ja fonttikoolle
 var nykyinenFontti = "Courier New";
 var fonttikoko = 16;
 
-// Etsitään nappi, lista ja infoboxi HTML-elementeistä
 var nappi = document.getElementById("nappi");
 var lista = document.getElementById("lista");
 var infoboxi = document.getElementById("fonttikoko");
 
-// Lisätään tapahtumakuuntelija napin painallukselle
-nappi.addEventListener("click", vaihdaFontti);
+nappi.addEventListener("click", vaihdaFonttiJaKasvataKokoa);
 
-// Määritellään funktion vaihdaFontti
-function vaihdaFontti() {
-  // Tarkistetaan nykyinen fontti ja vaihdetaan siihen perustuen
+function vaihdaFonttiJaKasvataKokoa() {
   if (nykyinenFontti === "Courier New") {
     lista.style.fontFamily = "Roboto";
     nykyinenFontti = "Roboto";
@@ -30,16 +25,6 @@ function vaihdaFontti() {
     nykyinenFontti = "Courier New";
   }
 
-  // Päivitetään infoboxin sisältö
-  infoboxi.textContent =
-    "Fontti: " + nykyinenFontti + ", Koko: " + fonttikoko + "px";
-}
-
-// Lisätään tapahtumakuuntelija napin painallukselle
-nappi.addEventListener("click", kasvataFonttikokoa);
-
-// Määritellään funktion kasvataFonttikokoa
-function kasvataFonttikokoa() {
   if (fonttikoko === 16) {
     fonttikoko = 20;
   } else if (fonttikoko === 20) {
@@ -52,13 +37,7 @@ function kasvataFonttikokoa() {
     fonttikoko = 16;
   }
 
-  // Päivitetään fonttikoko ja infoboxin sisältö
   lista.style.fontSize = fonttikoko + "px";
   infoboxi.textContent =
     "Fontti: " + nykyinenFontti + ", Koko: " + fonttikoko + "px";
 }
-
-// Asetetaan alustavat arvot listaan ja infoboxiin
-lista.style.fontSize = fonttikoko + "px";
-infoboxi.textContent =
-  "Fontti: " + nykyinenFontti + ", Koko: " + fonttikoko + "px";
